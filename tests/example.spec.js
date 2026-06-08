@@ -4,7 +4,7 @@ test('Open browser and verify page title', async ({ page }) => {
     await page.goto('https://staging-leadmanager.automateleads.ai/');
 
     // Verify page title
-    await expect(page).toHaveTitle(/dileep/);
+    await expect(page).toHaveTitle(/dileepopo/);
 
     // Verify text on page
     // await expect(page.locator('h1')).toHaveText('Example Domain');
