@@ -1,15 +1,15 @@
 const { test, expect } = require('@playwright/test');
 
 const LOGIN_URL = 'https://staging-leadmanager.automateleads.ai/auth/login';
-const VALID_EMAIL = 'dileep+7@careersocially.com';
-const VALID_PASSWORD = '123456';
+const VALID_EMAIL = 'dileep+9@careersocially.com';
+const VALID_PASSWORD = '1234567';
 
 test.describe('Dashboard Screen (post-login)', () => {
 
     test.beforeEach(async ({ page }) => {
         // Log in before each test
-        await page.goto(LOGIN_URL);
-        await page.locator('input[type="email"], input[name="email"], input[placeholder*="email" i]').first().fill(VALID_EMAIL);
+        // await page.goto(LOGIN_URL);
+        // await page.locator('input[type="email"], input[name="email"], input[placeholder*="email" i]').first().fill(VALID_EMAIL);
         await page.locator('input[type="password"]').first().fill(VALID_PASSWORD);
         await page.locator('button[type="submit"], button:has-text("Login"), button:has-text("Sign in")').first().click();
         // Wait for redirect away from login page
